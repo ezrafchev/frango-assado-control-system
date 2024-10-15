@@ -1,0 +1,10 @@
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'frangos_crus' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `frangos_crus` (`id` INTEGER auto_increment , `quantidade` INTEGER NOT NULL, `validade` DATETIME NOT NULL, `peso` FLOAT NOT NULL, `origem` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `frangos_crus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'insumos' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `insumos` (`id` INTEGER auto_increment , `nome` VARCHAR(255) NOT NULL, `quantidade` INTEGER NOT NULL, `validade` DATETIME NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `insumos`
+Server is running on http://localhost:3000
+Executing (default): SELECT `id`, `quantidade`, `validade`, `peso`, `origem`, `createdAt`, `updatedAt` FROM `frangos_crus` AS `FrangoCru`;
+Executing (default): INSERT INTO `frangos_crus` (`id`,`quantidade`,`validade`,`peso`,`origem`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+Executing (default): SELECT `id`, `quantidade`, `validade`, `peso`, `origem`, `createdAt`, `updatedAt` FROM `frangos_crus` AS `FrangoCru`;
