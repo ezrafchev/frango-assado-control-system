@@ -8,6 +8,7 @@ app.use(express.json());
 const frangosCrusRouter = require('./routes/frangosCrus');
 const insumosRouter = require('./routes/insumos');
 const vendasRouter = require('./routes/vendas');
+const pedidosRouter = require('./routes/pedidos');
 const planejamentoProducaoRouter = require('./routes/planejamentoProducao');
 
 app.use('/api/frangos-crus', frangosCrusRouter);
