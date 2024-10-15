@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 
 const frangosCrusRouter = require('./routes/frangosCrus');
-const insumosRouter = require('./routes/insumos');
+const planejamentoProducaoRouter = require('./routes/planejamentoProducao');
 
 app.use('/api/frangos-crus', frangosCrusRouter);
 app.use('/api/insumos', insumosRouter);
