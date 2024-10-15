@@ -10,6 +10,7 @@ const planejamentoProducaoRouter = require('./routes/planejamentoProducao');
 
 app.use('/api/frangos-crus', frangosCrusRouter);
 app.use('/api/insumos', insumosRouter);
+app.use('/api/planejamento-producao', planejamentoProducaoRouter);
 
 const sequelize = require('./config/database');
 
