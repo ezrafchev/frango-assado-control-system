@@ -15,6 +15,7 @@ const sequelize = require('./config/database');
 
 sequelize.sync().then(() => {
     console.log('Database synchronized');
+    });
     app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
