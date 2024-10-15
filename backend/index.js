@@ -11,6 +11,10 @@ const insumosRouter = require('./routes/insumos');
 app.use('/api/frangos-crus', frangosCrusRouter);
 app.use('/api/insumos', insumosRouter);
 
-app.listen(port, () => {
+const sequelize = require('./config/database');
+
+sequelize.sync().then(() => {
+    console.log('Database synchronized');
+    app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

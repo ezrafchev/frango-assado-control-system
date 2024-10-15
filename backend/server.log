@@ -1,1 +1,2 @@
 Server is running on http://localhost:3000
+Executing (default): SELECT `id`, `quantidade`, `validade`, `peso`, `origem`, `createdAt`, `updatedAt` FROM `FrangoCrus` AS `FrangoCru`;
