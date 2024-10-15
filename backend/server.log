@@ -3,10 +3,12 @@ Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABL
 Executing (default): SHOW INDEX FROM `FrangoCrus`
 Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Insumos' AND TABLE_SCHEMA = 'frango_assado'
 Executing (default): SHOW INDEX FROM `Insumos`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Vendas' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `Vendas` (`id` INTEGER NOT NULL auto_increment , `data` DATETIME NOT NULL, `quantidade` INTEGER NOT NULL, `valor` FLOAT NOT NULL, `tipo` VARCHAR(255) NOT NULL, `plataforma` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Vendas`
 Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'PlanejamentoProducaos' AND TABLE_SCHEMA = 'frango_assado'
-Executing (default): CREATE TABLE IF NOT EXISTS `PlanejamentoProducaos` (`id` INTEGER NOT NULL auto_increment , `data` DATETIME NOT NULL, `quantidade_frangos` INTEGER NOT NULL, `tempo_preparo` INTEGER NOT NULL, `tempo_assado` INTEGER NOT NULL, `insumos_utilizados` JSON NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
 Executing (default): SHOW INDEX FROM `PlanejamentoProducaos`
 Database synchronized
-Executing (default): SELECT `id`, `data`, `quantidade_frangos`, `tempo_preparo`, `tempo_assado`, `insumos_utilizados`, `createdAt`, `updatedAt` FROM `PlanejamentoProducaos` AS `PlanejamentoProducao`;
-Executing (default): INSERT INTO `PlanejamentoProducaos` (`id`,`data`,`quantidade_frangos`,`tempo_preparo`,`tempo_assado`,`insumos_utilizados`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
-Executing (default): SELECT `id`, `data`, `quantidade_frangos`, `tempo_preparo`, `tempo_assado`, `insumos_utilizados`, `createdAt`, `updatedAt` FROM `PlanejamentoProducaos` AS `PlanejamentoProducao`;
+Executing (default): SELECT `id`, `data`, `quantidade`, `valor`, `tipo`, `plataforma`, `createdAt`, `updatedAt` FROM `Vendas` AS `Venda`;
+Executing (default): INSERT INTO `Vendas` (`id`,`data`,`quantidade`,`valor`,`tipo`,`plataforma`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `id`, `data`, `quantidade`, `valor`, `tipo`, `plataforma`, `createdAt`, `updatedAt` FROM `Vendas` AS `Venda`;
