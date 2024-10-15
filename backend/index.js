@@ -15,6 +15,7 @@ app.use('/api/frangos-crus', frangosCrusRouter);
 app.use('/api/insumos', insumosRouter);
 app.use('/api/planejamento-producao', planejamentoProducaoRouter);
 app.use('/api/vendas', vendasRouter);
+app.use('/api/pedidos', pedidosRouter);
 
 const sequelize = require('./config/database');
 
