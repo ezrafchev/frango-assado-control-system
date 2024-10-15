@@ -1,14 +1,12 @@
-/home/user/backend/index.js:12
-app.use('/api/insumos', insumosRouter);
-                        ^
-
-ReferenceError: insumosRouter is not defined
-    at Object.<anonymous> (/home/user/backend/index.js:12:25)
-    at Module._compile (node:internal/modules/cjs/loader:1469:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
-    at Module.load (node:internal/modules/cjs/loader:1288:32)
-    at Module._load (node:internal/modules/cjs/loader:1104:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
-    at node:internal/main/run_main_module:28:49
-
-Node.js v20.17.0
+Server is running on http://localhost:3000
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'FrangoCrus' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): SHOW INDEX FROM `FrangoCrus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Insumos' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): SHOW INDEX FROM `Insumos`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'PlanejamentoProducaos' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `PlanejamentoProducaos` (`id` INTEGER NOT NULL auto_increment , `data` DATETIME NOT NULL, `quantidade_frangos` INTEGER NOT NULL, `tempo_preparo` INTEGER NOT NULL, `tempo_assado` INTEGER NOT NULL, `insumos_utilizados` JSON NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `PlanejamentoProducaos`
+Database synchronized
+Executing (default): SELECT `id`, `data`, `quantidade_frangos`, `tempo_preparo`, `tempo_assado`, `insumos_utilizados`, `createdAt`, `updatedAt` FROM `PlanejamentoProducaos` AS `PlanejamentoProducao`;
+Executing (default): INSERT INTO `PlanejamentoProducaos` (`id`,`data`,`quantidade_frangos`,`tempo_preparo`,`tempo_assado`,`insumos_utilizados`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `id`, `data`, `quantidade_frangos`, `tempo_preparo`, `tempo_assado`, `insumos_utilizados`, `createdAt`, `updatedAt` FROM `PlanejamentoProducaos` AS `PlanejamentoProducao`;
