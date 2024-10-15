@@ -1,14 +1,11 @@
-/home/user/backend/index.js:21
-
-
-
-SyntaxError: Unexpected end of input
-    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
-    at Module._compile (node:internal/modules/cjs/loader:1428:41)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
-    at Module.load (node:internal/modules/cjs/loader:1288:32)
-    at Module._load (node:internal/modules/cjs/loader:1104:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
-    at node:internal/main/run_main_module:28:49
-
-Node.js v20.17.0
+Server is running on http://localhost:3000
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'FrangoCrus' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `FrangoCrus` (`id` INTEGER NOT NULL auto_increment , `quantidade` INTEGER NOT NULL, `validade` DATETIME NOT NULL, `peso` FLOAT NOT NULL, `origem` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `FrangoCrus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Insumos' AND TABLE_SCHEMA = 'frango_assado'
+Executing (default): CREATE TABLE IF NOT EXISTS `Insumos` (`id` INTEGER NOT NULL auto_increment , `nome` VARCHAR(255) NOT NULL, `quantidade` INTEGER NOT NULL, `validade` DATETIME NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Insumos`
+Database synchronized
+Executing (default): SELECT `id`, `quantidade`, `validade`, `peso`, `origem`, `createdAt`, `updatedAt` FROM `FrangoCrus` AS `FrangoCru`;
+Executing (default): INSERT INTO `FrangoCrus` (`id`,`quantidade`,`validade`,`peso`,`origem`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+Executing (default): SELECT `id`, `quantidade`, `validade`, `peso`, `origem`, `createdAt`, `updatedAt` FROM `FrangoCrus` AS `FrangoCru`;
